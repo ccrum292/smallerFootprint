@@ -68,7 +68,7 @@ usersController.get('/search/:email', (req, res) => {
 
 
 // get all of the people that the user is following and their current challenge point total
-// working
+// Partly working
 usersController.get("/follows", JWTVerifier, (req, res) => {
   db.User.findByPk(req.user.id)
     .then(user => {
